@@ -1,0 +1,9 @@
+(footprint "MountingHole_M2"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "H" (at 0 0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+	(property "Value" "MountingHole_M2" (at 0 0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+	(pad "" np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers "*.Cu" "*.Mask"))
+)

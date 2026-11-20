@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.0 210.0" width="1122.52px" height="793.70px">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#FB7185" />
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#00F0FF" />
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D4AF37" />
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#EF4444" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981" />
+    </marker>
+    <style>
+      .paper { fill: #FFFFFF; stroke: #000000; stroke-width: 0.70; }
+      .border { fill: none; stroke: #000000; stroke-width: 0.50; }
+      .title-block-line { stroke: #000000; stroke-width: 0.25; }
+      .text-title { font-family: "Segoe UI", Arial, sans-serif; font-size: 3.2px; font-weight: bold; fill: #000000; }
+      .text-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 2.2px; font-weight: bold; fill: #334155; }
+      .text-body { font-family: "Segoe UI", Arial, sans-serif; font-size: 1.8px; fill: #000000; }
+      .text-caption { font-family: "Segoe UI", Arial, sans-serif; font-size: 1.4px; fill: #64748B; }
+      .node-hdr { font-family: "Segoe UI", Arial, sans-serif; font-size: 2.4px; font-weight: bold; fill: #FFFFFF; }
+      .node-txt { font-family: "Segoe UI", Arial, sans-serif; font-size: 1.7px; fill: #E2E8F0; }
+      .node-sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 1.4px; fill: #94A3B8; }
+      .accent-cyan { fill: #00F0FF; font-weight: bold; }
+      .accent-gold { fill: #F59E0B; font-weight: bold; }
+      .accent-red { fill: #F87171; font-weight: bold; }
+      .accent-green { fill: #34D399; font-weight: bold; }
+    </style>
+  </defs>
+  <!-- Sheet Canvas: A4 Landscape (297.0 x 210.0 mm) -->
+  <rect x="0" y="0" width="297.0" height="210.0" class="paper"/>
+  <rect x="20.0" y="10.0" width="267.0" height="190.0" class="border"/>
+  <!-- Diagram Title Banner -->
+  <rect x="22.0" y="12.0" width="263" height="11" rx="1.5" fill="#0F172A" stroke="#00F0FF" stroke-width="0.4"/>
+  <text x="26.0" y="16.5" font-family="Segoe UI" font-size="3.2px" font-weight="bold" fill="#00F0FF">PRISM SAFETY GPS (PRJ-PSG-01) — SISTEM ARSITEKTUR &amp; TOPOLOGI GATEWAY</text>
+  <text x="26.0" y="20.0" font-family="Segoe UI" font-size="2.0px" fill="#94A3B8">Smartphone Local Edge Gateway (BLE 5.0 GATT → WebSocket/Firebase → Google Maps) | Dual Fail-Safe SOS Machine</text>
+
+  <!-- NODE 1: PRISM SAFETY GPS HARDWARE -->
+  <g transform="translate(24.0, 25)">
+    <rect width="66" height="66" rx="2" fill="url(#cardGrad1)" stroke="#38BDF8" stroke-width="0.5"/>
+    <rect width="66" height="7" rx="2" fill="#0284C7"/>
+    <text x="4" y="4.8" class="node-hdr">1. PRISM SAFETY GPS (EDGE SENSOR)</text>
+    
+    <!-- Sub-blocks inside hardware -->
+    <rect x="3" y="10" width="60" height="11" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="14.5" class="node-txt"><tspan class="accent-cyan">ESP32-C3 SuperMini</tspan> RISC-V 32-bit @ 160MHz</text>
+    <text x="5" y="18.5" class="node-sub">BLE 5.0 GATT Server, FreeRTOS, Low-Power Standby</text>
+    
+    <rect x="3" y="23" width="60" height="11" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="27.5" class="node-txt"><tspan class="accent-cyan">ADXL345</tspan> 3-Axis IMU (I2C 0x53, SDA:8, SCL:9)</text>
+    <text x="5" y="31.5" class="node-sub">Ambang Benturan: |a(t)| ≥ 3.8g, Interupsi HW INT1: GPIO3</text>
+    
+    <rect x="3" y="36" width="60" height="11" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="40.5" class="node-txt"><tspan class="accent-cyan">u-blox NEO-6M</tspan> GNSS (UART1 RX0:20, TX0:21)</text>
+    <text x="5" y="44.5" class="node-sub">Antena Keramik 25x25mm Menghadap Langit, 5Hz Update</text>
+    
+    <rect x="3" y="49" width="60" height="13" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="53.5" class="node-txt"><tspan class="accent-gold">Power &amp; Alarm</tspan>: Li-Po 103040 1200mAh + TP4056</text>
+    <text x="5" y="57.5" class="node-sub">Pembagi R1-R2 (2x100kΩ) → ADC1_CH2, Active Buzzer: GPIO4</text>
+    <text x="5" y="60.5" class="node-sub">Filter Decoupling: C1 100uF + C2 100nF, C3 100uF + C4 100nF</text>
+  </g>
+
+
+  <!-- ARROW 1: BLE 5.0 GATT -->
+  <g transform="translate(94, 52)">
+    <line x1="0" y1="0" x2="16" y2="0" stroke="#00F0FF" stroke-width="1.2" stroke-dasharray="3,1.5" marker-end="url(#arrowCyan)"/>
+    <rect x="1" y="-10" width="14" height="8" rx="1" fill="#0F172A" stroke="#00F0FF" stroke-width="0.3"/>
+    <text x="8" y="-5.5" font-family="Segoe UI" font-size="1.5px" font-weight="bold" fill="#00F0FF" text-anchor="middle">BLE 5.0 GATT</text>
+    <text x="8" y="-3.2" font-family="Segoe UI" font-size="1.2px" fill="#94A3B8" text-anchor="middle">4 Hz / 250ms</text>
+  </g>
+
+
+  <!-- NODE 2: SMARTPHONE LOCAL EDGE GATEWAY -->
+  <g transform="translate(112, 25)">
+    <rect width="64" height="66" rx="2" fill="url(#cardGrad1)" stroke="#38BDF8" stroke-width="0.5"/>
+    <rect width="64" height="7" rx="2" fill="#2563EB"/>
+    <text x="4" y="4.8" class="node-hdr">2. SMARTPHONE LOCAL EDGE GATEWAY</text>
+    
+    <rect x="3" y="10" width="58" height="12" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="14.5" class="node-txt"><tspan class="accent-cyan">Web Bluetooth / Companion PWA</tspan></text>
+    <text x="5" y="18.5" class="node-sub">UUID: 4fafc201-1fb5-459e-8fcc-c5c9c331914b</text>
+    <text x="5" y="21.0" class="node-sub">Char: beb5483e (Notify), 82b97611 (Command)</text>
+    
+    <rect x="3" y="24" width="58" height="13" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="28.5" class="node-txt"><tspan class="accent-gold">Dual Fail-Safe Evaluator</tspan></text>
+    <text x="5" y="32.5" class="node-sub">Countdown Timer 12s | Evaluasi Varians Percepatan</text>
+    <text x="5" y="35.5" class="node-sub">Tombol Pembatalan Darurat: "CANCEL_SOS"</text>
+    
+    <rect x="3" y="39" width="58" height="13" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="43.5" class="node-txt"><tspan class="accent-red">Dead-Man's Switch Level 1</tspan></text>
+    <text x="5" y="47.5" class="node-sub">Deteksi Putus BLE Seketika saat Impact Terjadi</text>
+    <text x="5" y="50.5" class="node-sub">Otomatis Teruskan Koordinat Terakhir (x_last, y_last)</text>
+
+    <rect x="3" y="54" width="58" height="9" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="58.5" class="node-txt"><tspan class="accent-green">Jalur Seluler 4G/5G / Wi-Fi</tspan> Backhaul</text>
+    <text x="5" y="61.5" class="node-sub">Kompresi Paket JSON Latensi Rendah (&lt; 150ms)</text>
+  </g>
+
+
+  <!-- ARROW 2: WSS / HTTPS -->
+  <g transform="translate(180, 52)">
+    <line x1="0" y1="0" x2="16" y2="0" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="3,1.5" marker-end="url(#arrowGold)"/>
+    <rect x="1" y="-10" width="14" height="8" rx="1" fill="#0F172A" stroke="#F59E0B" stroke-width="0.3"/>
+    <text x="8" y="-5.5" font-family="Segoe UI" font-size="1.5px" font-weight="bold" fill="#F59E0B" text-anchor="middle">WSS / HTTPS</text>
+    <text x="8" y="-3.2" font-family="Segoe UI" font-size="1.2px" fill="#94A3B8" text-anchor="middle">JSON Stream</text>
+  </g>
+
+
+  <!-- NODE 3: CLOUD & GOOGLE MAPS LIVE STREAM -->
+  <g transform="translate(198, 25)">
+    <rect width="85" height="66" rx="2" fill="url(#cardGrad1)" stroke="#38BDF8" stroke-width="0.5"/>
+    <rect width="85" height="7" rx="2" fill="#7C3AED"/>
+    <text x="4" y="4.8" class="node-hdr">3. CLOUD BACKBONE &amp; GOOGLE MAPS DASHBOARD</text>
+    
+    <rect x="3" y="10" width="79" height="13" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="14.5" class="node-txt"><tspan class="accent-gold">Firebase Realtime Database</tspan></text>
+    <text x="5" y="18.5" class="node-sub">Sinkronisasi State Global, Telemetri Real-Time</text>
+    <text x="5" y="21.5" class="node-sub">Dead-Man's Switch Level 2: Hook onDisconnect() Cloud</text>
+    
+    <rect x="3" y="25" width="79" height="13" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="29.5" class="node-txt"><tspan class="accent-cyan">Google Maps JavaScript API V3</tspan></text>
+    <text x="5" y="33.5" class="node-sub">Live Breadcrumb Tracking, Heading Vector, Geofencing</text>
+    <text x="5" y="36.5" class="node-sub">Popup Telemetri: Kecepatan, G-Force Peak, Status Baterai %</text>
+    
+    <rect x="3" y="40" width="79" height="23" rx="1" fill="#1E293B" stroke="#475569" stroke-width="0.3"/>
+    <text x="5" y="44.5" class="node-txt"><tspan class="accent-red">Emergency Dispatch &amp; Family Notification</tspan></text>
+    <text x="5" y="48.5" class="node-sub">• Notifikasi Telegram Bot / WhatsApp / SMS Darurat</text>
+    <text x="5" y="52.0" class="node-sub">• Pin Peta Titik Benturan Presisi &amp; Rute Terdekat ke RS</text>
+    <text x="5" y="55.5" class="node-sub">• Log Forensik: Profil Akselerasi 3-Sumbu Pasca-Insiden</text>
+    <text x="5" y="59.0" class="node-sub">• Peringatan Audio &amp; Visual Real-Time pada Dashboard Petugas</text>
+  </g>
+
+
+  <!-- SECTION 2: DUAL FAIL-SAFE SOS STATE MACHINE -->
+  <g transform="translate(24.0, 95)">
+    <!-- Outer Container -->
+    <rect width="259" height="63" rx="2" fill="#0B132B" stroke="#D4AF37" stroke-width="0.5"/>
+    <rect width="259" height="6.5" rx="2" fill="#B45309"/>
+    <text x="4" y="4.5" class="node-hdr">STATE MACHINE: DUAL FAIL-SAFE SOS &amp; IMPACT IMMOBILITY DETECTION</text>
+    
+    <!-- State 0: Normal Tracking -->
+    <g transform="translate(6, 12)">
+      <rect width="68" height="45" rx="2" fill="#1E293B" stroke="#10B981" stroke-width="0.6"/>
+      <rect width="68" height="6" rx="2" fill="#065F46"/>
+      <text x="4" y="4.2" class="node-hdr" fill="#34D399">STATE 0: NORMAL TRACKING</text>
+      <text x="4" y="11" class="node-txt">Kondisi Normal Berkendara</text>
+      <text x="4" y="15" class="node-sub">• Akselerasi dinamis: |a(t)| &lt; 2.5g</text>
+      <text x="4" y="18.5" class="node-sub">• Kecepatan GNSS: v ≥ 0.0 km/h</text>
+      <text x="4" y="22" class="node-sub">• Laju Telemetri BLE: 4 Hz (250ms)</text>
+      <text x="4" y="25.5" class="node-sub">• Buzzer: MATI (Low)</text>
+      <text x="4" y="29" class="node-sub">• Indikator LED ESP32: Berkedip 1Hz</text>
+      <text x="4" y="33" class="node-txt"><tspan class="accent-green">Siaga Aktif (Standby Proteksi)</tspan></text>
+      <text x="4" y="37" class="node-sub">Loop I2C &amp; UART NMEA parser berjalan</text>
+      <text x="4" y="40.5" class="node-sub">Monitoring Voltase Baterai Li-Po 103040</text>
+    </g>
+    
+    <!-- Transition 0 -> 1 -->
+    <g transform="translate(76, 30)">
+      <line x1="0" y1="0" x2="16" y2="0" stroke="#F59E0B" stroke-width="1.0" marker-end="url(#arrowGold)"/>
+      <rect x="1" y="-8.5" width="14" height="6.5" rx="1" fill="#1E293B" stroke="#F59E0B" stroke-width="0.3"/>
+      <text x="8" y="-4.5" font-family="Segoe UI" font-size="1.4px" font-weight="bold" fill="#F59E0B" text-anchor="middle">|a(t)| ≥ 3.8g</text>
+      <text x="8" y="-2.5" font-family="Segoe UI" font-size="1.1px" fill="#94A3B8" text-anchor="middle">Impact Spike</text>
+    </g>
+
+    <!-- State 1: Warning Impact -->
+    <g transform="translate(94, 12)">
+      <rect width="72" height="45" rx="2" fill="#1E293B" stroke="#F59E0B" stroke-width="0.6"/>
+      <rect width="72" height="6" rx="2" fill="#92400E"/>
+      <text x="4" y="4.2" class="node-hdr" fill="#FBBF24">STATE 1: WARNING IMPACT</text>
+      <text x="4" y="11" class="node-txt">Peringatan Benturan Terdeteksi</text>
+      <text x="4" y="15" class="node-sub">• Mulai Timer Evaluasi: <tspan class="accent-gold">ΔT_eval = 12 s</tspan></text>
+      <text x="4" y="18.5" class="node-sub">• Buzzer: Pulsa Intermiten (Beep... Beep...)</text>
+      <text x="4" y="22" class="node-sub">• Layar HP: Popup Konfirmasi Darurat</text>
+      <text x="4" y="25.5" class="node-sub">• Rekam Peak G-Force &amp; Titik Lokasi</text>
+      <text x="4" y="29.5" class="node-txt"><tspan class="accent-cyan">Opsi Pembatalan (False Alarm):</tspan></text>
+      <text x="4" y="33.5" class="node-sub">Jika Pengguna Menekan "SAYA AMAN",</text>
+      <text x="4" y="37" class="node-sub">Kirim "CANCEL_SOS" via BLE → Kembali</text>
+      <text x="4" y="40.5" class="node-sub">ke STATE 0 secara instan.</text>
+    </g>
+    
+    <!-- Transition 1 -> 0 (Cancel SOS) -->
+    <path d="M 120 12 C 110 5, 80 5, 60 12" fill="none" stroke="#10B981" stroke-width="0.8" stroke-dasharray="2,1" marker-end="url(#arrowGreen)"/>
+    <text x="90" y="7.5" font-family="Segoe UI" font-size="1.2px" font-weight="bold" fill="#10B981" text-anchor="middle">Pengguna Batal: CANCEL_SOS</text>
+
+    <!-- Transition 1 -> 2 -->
+    <g transform="translate(168, 30)">
+      <line x1="0" y1="0" x2="16" y2="0" stroke="#EF4444" stroke-width="1.0" marker-end="url(#arrowRed)"/>
+      <rect x="0" y="-10" width="16" height="8.5" rx="1" fill="#1E293B" stroke="#EF4444" stroke-width="0.3"/>
+      <text x="8" y="-6.5" font-family="Segoe UI" font-size="1.3px" font-weight="bold" fill="#EF4444" text-anchor="middle">ΔT = 12 s Lolos</text>
+      <text x="8" y="-4.2" font-family="Segoe UI" font-size="1.1px" fill="#E2E8F0" text-anchor="middle">v &lt; 0.5 m/s</text>
+      <text x="8" y="-2.2" font-family="Segoe UI" font-size="1.1px" fill="#94A3B8" text-anchor="middle">σ_a² &lt; 0.03 g²</text>
+    </g>
+
+    <!-- State 2: SOS Immobile -->
+    <g transform="translate(186, 12)">
+      <rect width="68" height="45" rx="2" fill="#1E293B" stroke="#EF4444" stroke-width="0.8"/>
+      <rect width="68" height="6" rx="2" fill="#991B1B"/>
+      <text x="4" y="4.2" class="node-hdr" fill="#F87171">STATE 2: SOS IMMOBILE (DARURAT)</text>
+      <text x="4" y="11" class="node-txt"><tspan class="accent-red">KORBAN TIDAK BERGERAK</tspan></text>
+      <text x="4" y="15" class="node-sub">• Buzzer: Bunyi Sirene Kontinu Keras</text>
+      <text x="4" y="18.5" class="node-sub">• Push Notifikasi Darurat ke Keluarga &amp; RS</text>
+      <text x="4" y="22" class="node-sub">• Transmisi Koordinat GPS Darurat (Lat, Lng)</text>
+      <text x="4" y="25.5" class="node-sub">• Google Maps: Peringatan Merah Berkedip</text>
+      <text x="4" y="29.5" class="node-txt"><tspan class="accent-gold">Dead-Man's Fail-Safe Backup:</tspan></text>
+      <text x="4" y="33.5" class="node-sub">Jika BLE Terputus Mendadak Saat Tabrakan,</text>
+      <text x="4" y="37" class="node-sub">Gateway Langsung Memicu SOS pada Titik</text>
+      <text x="4" y="40.5" class="node-sub">Terakhir Tanpa Menunggu Respon Korban.</text>
+    </g>
+  </g>
+
+
+  <!-- ISO 7200 / UHAMKA TITLE BLOCK (180 x 40 mm) -->
+  <g id="TitleBlock">
+    <!-- Outer Title Block Frame -->
+    <rect x="107.0" y="160.0" width="180.0" height="40.0" fill="#FFFFFF" class="border"/>
+    
+    <!-- Horizontal Dividers -->
+    <line x1="107.0" y1="173.0" x2="287.0" y2="173.0" class="title-block-line"/>
+    <line x1="107.0" y1="186.0" x2="287.0" y2="186.0" class="title-block-line"/>
+    
+    <!-- Vertical Dividers -->
+    <line x1="212.0" y1="160.0" x2="212.0" y2="173.0" class="title-block-line"/>
+    <line x1="252.0" y1="160.0" x2="252.0" y2="173.0" class="title-block-line"/>
+    <line x1="167.0" y1="173.0" x2="167.0" y2="200.0" class="title-block-line"/>
+    <line x1="227.0" y1="173.0" x2="227.0" y2="200.0" class="title-block-line"/>
+    <line x1="262.0" y1="186.0" x2="262.0" y2="200.0" class="title-block-line"/>
+
+    <!-- Row 1: Left - Institution -->
+    <text x="110.0" y="164.5" class="text-caption">LEMBAGA / INSTITUSI PENDIDIKAN:</text>
+    <text x="110.0" y="168.5" class="text-sub">UNIVERSITAS MUHAMMADIYAH PROF. DR. HAMKA</text>
+    <text x="110.0" y="171.5" class="text-caption">FTII — PROGRAM STUDI TEKNIK ELEKTRO | PRISM ENGINEERING HUB</text>
+
+    <!-- Row 1: Middle - Projection -->
+    <text x="214.0" y="164.5" class="text-caption">METODE PROYEKSI:</text>
+    <!-- Third Angle Symbol -->
+    <polygon points="222.0,166.0 230.0,167.5 230.0,170.5 222.0,172.0" fill="none" stroke="#000" stroke-width="0.3"/>
+    <circle cx="237.0" cy="169.0" r="1.5" fill="none" stroke="#000" stroke-width="0.3"/>
+    <circle cx="237.0" cy="169.0" r="3.2" fill="none" stroke="#000" stroke-width="0.3"/>
+    <line x1="220.0" y1="169.0" x2="242.0" y2="169.0" stroke="#666" stroke-width="0.2" stroke-dasharray="1,0.5"/>
+    <text x="214.0" y="172.2" class="text-caption">PROYEKSI SUDUT KETIGA</text>
+
+    <!-- Row 1: Right - Tolerances & Scale -->
+    <text x="254.0" y="164.5" class="text-caption">STANDAR TOLERANSI:</text>
+    <text x="254.0" y="168.0" class="text-sub">ISO 2768-m</text>
+    <text x="254.0" y="171.5" class="text-caption">SATUAN: mm | SKALA: NTS</text>
+
+    <!-- Row 2 & 3: Author & Roles -->
+    <text x="110.0" y="176.5" class="text-caption">PERANCANG / PENELITI UTAMA:</text>
+    <text x="110.0" y="180.5" class="text-sub">Ahmad Rifa'i Wibisono</text>
+    <text x="110.0" y="184.0" class="text-caption">NIM: 2201015024 (TEKNIK ELEKTRO)</text>
+    
+    <text x="110.0" y="189.5" class="text-caption">OTORITAS HOST / NODE:</text>
+    <text x="110.0" y="193.5" class="text-body" font-weight="bold">ROOT_1_PC_AM5 (GOLDENRATIO1618)</text>
+    <text x="110.0" y="197.5" class="text-caption">C:\Antigravity\PRISM SAFETY GPS</text>
+
+    <!-- Middle: Project and Drawing Title -->
+    <text x="170.0" y="176.5" class="text-caption">NAMA PROYEK / ID REGISTRI:</text>
+    <text x="170.0" y="181.0" class="text-title">PRISM SAFETY GPS (PRJ-PSG-01)</text>
+    <text x="170.0" y="184.5" class="text-caption">COMPACT IMPACT-SENSING &amp; REAL-TIME GNSS TRACKER</text>
+    
+    <text x="170.0" y="189.5" class="text-caption">JUDUL LEMBAR GAMBAR KERJA:</text>
+    <text x="170.0" y="194.0" class="text-title" fill="#0284C7">02_System_Architecture_Flow.svg</text>
+    <text x="170.0" y="197.5" class="text-caption">TOPOLOGI GATEWAY LOKAL HP &amp; MESIN KEADAAN SOS</text>
+
+    <!-- Right: Technical Details -->
+    <text x="230.0" y="176.5" class="text-caption">TANGGAL SINKRONISASI:</text>
+    <text x="230.0" y="181.0" class="text-body" font-weight="bold">2026-11-05 WIB</text>
+    <text x="230.0" y="184.5" class="text-caption">STATUS: APPROVED FOR PROD</text>
+
+    <text x="230.0" y="189.5" class="text-caption">LEMBAR:</text>
+    <text x="230.0" y="195.5" class="text-sub">02 / 08</text>
+
+    <text x="265.0" y="189.5" class="text-caption">FORMAT:</text>
+    <text x="265.0" y="195.5" class="text-sub">A4 LAND</text>
+  </g>
+
+</svg>

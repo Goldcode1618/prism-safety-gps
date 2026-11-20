@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PRISM")(type "KiCad")(uri "${KIPRJMOD}/PRISM.kicad_sym")(options "")(descr "PRISM Safety GPS Symbols"))
+)

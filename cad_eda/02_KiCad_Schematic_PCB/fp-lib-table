@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PRISM_Safety_GPS")(type "KiCad")(uri "${KIPRJMOD}/PRISM_Safety_GPS.pretty")(options "")(descr "PRISM Footprints"))
+)

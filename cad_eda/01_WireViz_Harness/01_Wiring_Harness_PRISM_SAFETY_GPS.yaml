@@ -1,0 +1,271 @@
+title: "PRISM SAFETY GPS (PRJ-PSG-01) — Comprehensive Wiring Harness"
+description: "Interconnection Harness between ESP32-C3 SuperMini, TP4056, Li-Po 103040, ADXL345, NEO-6M, Buzzer, Voltage Divider, and Filter Capacitors"
+
+connectors:
+  BT1:
+    type: "Li-Po 103040 (3.7V 1200mAh PCM)"
+    pincount: 2
+    pinlabels: [BAT+, BAT-]
+
+  U2:
+    type: "TP4056 Type-C Charger and Protection"
+    pincount: 4
+    pinlabels: [BAT+, BAT-, OUT+, OUT-]
+
+  SW1:
+    type: "Slide Switch SPDT (SS12D00G3)"
+    pincount: 3
+    pinlabels: ["NC", "COM", "ON"]
+
+  DIV1:
+    type: "Voltage Divider R1-R2 (2x 100kOhm 1%)"
+    pincount: 3
+    pinlabels: [V_IN, V_DIV, GND]
+
+  U1:
+    type: "ESP32-C3 SuperMini RISC-V MCU"
+    pincount: 10
+    pinlabels: [VIN_5V, 3V3, GND, GPIO2_ADC, GPIO3_INT1, GPIO4_BUZ, GPIO8_SDA, GPIO9_SCL, GPIO20_RX, GPIO21_TX]
+
+  U3:
+    type: "ADXL345 3-Axis Accelerometer (0x53)"
+    pincount: 7
+    pinlabels: [VCC, GND, CS, SDO, SDA, SCL, INT1]
+
+  U4:
+    type: "u-blox NEO-6M GPS (GY-NEO6MV2)"
+    pincount: 4
+    pinlabels: [VCC, RX, TX, GND]
+
+  BZ1:
+    type: "Active Buzzer 3.3V"
+    pincount: 3
+    pinlabels: [VCC, IO, GND]
+
+  C1_C2:
+    type: "GPS Filter Bank (C1 100uF + C2 100nF)"
+    pincount: 2
+    pinlabels: [VCC, GND]
+
+  C3_C4:
+    type: "MCU 3.3V Filter Bank (C3 100uF + C4 100nF)"
+    pincount: 2
+    pinlabels: [3V3, GND]
+
+cables:
+  W_BAT:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 26 AWG
+    length: 0.04 m
+
+  W_SW_IN:
+    wirecount: 1
+    colors: [RD]
+    gauge: 26 AWG
+    length: 0.03 m
+
+  W_SW_TO_MCU:
+    wirecount: 1
+    colors: [RD]
+    gauge: 26 AWG
+    length: 0.03 m
+
+  W_SW_TO_DIV:
+    wirecount: 1
+    colors: [OG]
+    gauge: 26 AWG
+    length: 0.03 m
+
+  W_SENSE:
+    wirecount: 1
+    colors: [YE]
+    gauge: 28 AWG
+    length: 0.02 m
+
+  W_GND_TP_MCU:
+    wirecount: 1
+    colors: [BK]
+    gauge: 26 AWG
+    length: 0.04 m
+
+  W_GND_DIV:
+    wirecount: 1
+    colors: [BK]
+    gauge: 28 AWG
+    length: 0.02 m
+
+  W_GND_U3:
+    wirecount: 1
+    colors: [BK]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_GND_U4:
+    wirecount: 1
+    colors: [BK]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_3V3_U3:
+    wirecount: 1
+    colors: [RD]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_3V3_U4:
+    wirecount: 1
+    colors: [RD]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_3V3_BZ:
+    wirecount: 1
+    colors: [RD]
+    gauge: 28 AWG
+    length: 0.02 m
+
+  W_I2C:
+    wirecount: 2
+    colors: [BU, YE]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_INT1:
+    wirecount: 1
+    colors: [GN]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_GPS_UART:
+    wirecount: 2
+    colors: [GN, WH]
+    gauge: 28 AWG
+    length: 0.03 m
+
+  W_BUZ_IO:
+    wirecount: 1
+    colors: [OG]
+    gauge: 28 AWG
+    length: 0.02 m
+
+  W_FILT_GPS:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 28 AWG
+    length: 0.02 m
+
+  W_FILT_MCU:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 28 AWG
+    length: 0.02 m
+
+connections:
+  # 1. Baterai Li-Po ke TP4056 Charger
+  -
+    - BT1: [1, 2]
+    - W_BAT: [1, 2]
+    - U2: [1, 2]
+
+  # 2. Output TP4056 OUT+ ke Switch COM
+  -
+    - U2: [3]
+    - W_SW_IN: [1]
+    - SW1: [2]
+
+  # 3. Switch ON ke MCU VIN (5V)
+  -
+    - SW1: [3]
+    - W_SW_TO_MCU: [1]
+    - U1: [1]
+
+  # 4. Switch ON ke Pembagi Tegangan R1 (Sensori Baterai)
+  -
+    - SW1: [3]
+    - W_SW_TO_DIV: [1]
+    - DIV1: [1]
+
+  # 5. Pembagi Tegangan Midpoint ke GPIO 2 (ADC1_CH2)
+  -
+    - DIV1: [2]
+    - W_SENSE: [1]
+    - U1: [4]
+
+  # 6. Jalur Ground TP4056 ke MCU GND
+  -
+    - U2: [4]
+    - W_GND_TP_MCU: [1]
+    - U1: [3]
+
+  # 7. Jalur Ground MCU ke Pembagi Tegangan R2
+  -
+    - U1: [3]
+    - W_GND_DIV: [1]
+    - DIV1: [3]
+
+  # 8. Jalur Ground MCU ke ADXL345 GND
+  -
+    - U1: [3]
+    - W_GND_U3: [1]
+    - U3: [2]
+
+  # 9. Jalur Ground MCU ke u-blox NEO-6M GND
+  -
+    - U1: [3]
+    - W_GND_U4: [1]
+    - U4: [4]
+
+  # 10. Rel Daya 3.3V MCU ke ADXL345 VCC
+  -
+    - U1: [2]
+    - W_3V3_U3: [1]
+    - U3: [1]
+
+  # 11. Rel Daya 3.3V MCU ke NEO-6M VCC
+  -
+    - U1: [2]
+    - W_3V3_U4: [1]
+    - U4: [1]
+
+  # 12. Rel Daya 3.3V MCU ke Buzzer VCC
+  -
+    - U1: [2]
+    - W_3V3_BZ: [1]
+    - BZ1: [1]
+
+  # 13. I2C Bus: SDA (GPIO 8) & SCL (GPIO 9) ke ADXL345
+  -
+    - U1: [7, 8]
+    - W_I2C: [1, 2]
+    - U3: [5, 6]
+
+  # 14. Interupsi IMU: INT1 ke GPIO 3
+  -
+    - U3: [7]
+    - W_INT1: [1]
+    - U1: [5]
+
+  # 15. UART GNSS: NEO-6M TX -> RX0 (GPIO 20) & RX -> TX0 (GPIO 21)
+  -
+    - U4: [3, 2]
+    - W_GPS_UART: [1, 2]
+    - U1: [9, 10]
+
+  # 16. Sinyal Kontrol Buzzer (GPIO 4)
+  -
+    - U1: [6]
+    - W_BUZ_IO: [1]
+    - BZ1: [2]
+
+  # 17. Kapasitor Decoupling GPS (C1 100uF + C2 100nF)
+  -
+    - U4: [1, 4]
+    - W_FILT_GPS: [1, 2]
+    - C1_C2: [1, 2]
+
+  # 18. Kapasitor Decoupling MCU 3.3V (C3 100uF + C4 100nF)
+  -
+    - U1: [2, 3]
+    - W_FILT_MCU: [1, 2]
+    - C3_C4: [1, 2]

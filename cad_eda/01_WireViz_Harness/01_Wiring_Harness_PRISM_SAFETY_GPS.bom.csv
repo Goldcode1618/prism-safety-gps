@@ -1,0 +1,15 @@
+id,description,qty,unit,designators
+1,"Cable, 1 x 26 AWG",0.13,m,"W_GND_TP_MCU, W_SW_IN, W_SW_TO_DIV, W_SW_TO_MCU"
+2,"Cable, 1 x 28 AWG",0.23,m,"W_3V3_BZ, W_3V3_U3, W_3V3_U4, W_BUZ_IO, W_GND_DIV, W_GND_U3, W_GND_U4, W_INT1, W_SENSE"
+3,"Cable, 2 x 26 AWG",0.04,m,W_BAT
+4,"Cable, 2 x 28 AWG",0.1,m,"W_FILT_GPS, W_FILT_MCU, W_GPS_UART, W_I2C"
+5,"Connector, ADXL345 3-Axis Accelerometer (0x53), 7 pins",1,,U3
+6,"Connector, Active Buzzer 3.3V, 3 pins",1,,BZ1
+7,"Connector, ESP32-C3 SuperMini RISC-V MCU, 10 pins",1,,U1
+8,"Connector, GPS Filter Bank (C1 100uF + C2 100nF), 2 pins",1,,C1_C2
+9,"Connector, Li-Po 103040 (3.7V 1200mAh PCM), 2 pins",1,,BT1
+10,"Connector, MCU 3.3V Filter Bank (C3 100uF + C4 100nF), 2 pins",1,,C3_C4
+11,"Connector, Slide Switch SPDT (SS12D00G3), 3 pins",1,,SW1
+12,"Connector, TP4056 Type-C Charger and Protection, 4 pins",1,,U2
+13,"Connector, Voltage Divider R1-R2 (2x 100kOhm 1%), 3 pins",1,,DIV1
+14,"Connector, u-blox NEO-6M GPS (GY-NEO6MV2), 4 pins",1,,U4

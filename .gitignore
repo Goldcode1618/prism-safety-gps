@@ -1,0 +1,12 @@
+# Python & cache
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Drive conflict duplicates & temp
+* (1).*
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

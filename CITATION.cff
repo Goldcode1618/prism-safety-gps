@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "PRISM SAFETY GPS (PRJ-PSG-01): Ultra-Compact ESP32-C3 BLE Edge-Gateway Safety Telemetry and Impact Detection System"
+message: "If you use this hardware schematic, ESP32-C3 firmware, or dead-man's switch impact-detection architecture in your research, please cite this repository."
+type: software
+authors:
+  - family-names: "Wibisono"
+    given-names: "Ahmad Rifa'i"
+    orcid: "https://orcid.org/0009-0001-0120-5791"
+    affiliation: "Universitas Muhammadiyah Prof. DR. HAMKA (UHAMKA)"
+repository-code: "https://github.com/Goldcode1618/prism-safety-gps"
+license: "Apache-2.0"
+keywords:
+  - "ESP32-C3"
+  - "GPS Telemetry"
+  - "ADXL345"
+  - "Impact Detection"
+  - "BLE GATT"
+  - "Embedded Hardware"

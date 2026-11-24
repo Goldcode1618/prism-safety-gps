@@ -1,0 +1,28 @@
+{
+  "title": "PRISM SAFETY GPS (PRJ-PSG-01): Ultra-Compact ESP32-C3 BLE Edge-Gateway Safety Telemetry and Impact Detection System",
+  "description": "Low-cost embedded personal safety device combining ESP32-C3, u-blox NEO-6M GPS, ADXL345 3-axis accelerometer impact-immobility detection, and a smartphone BLE 5.0 edge gateway with server-side dead-man's switch failover.",
+  "upload_type": "software",
+  "license": "Apache-2.0",
+  "creators": [
+    {
+      "name": "Wibisono, Ahmad Rifa'i",
+      "affiliation": "Department of Electrical Engineering, Universitas Muhammadiyah Prof. DR. HAMKA (UHAMKA)",
+      "orcid": "0009-0001-0120-5791"
+    }
+  ],
+  "keywords": [
+    "ESP32-C3",
+    "GPS Telemetry",
+    "ADXL345",
+    "Impact Detection",
+    "BLE GATT",
+    "Embedded Hardware"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Goldcode1618/prism-safety-gps",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
